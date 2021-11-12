@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+}
+
+.header {
+    height: 65px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.header__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin: 0 20px;
+}
+
+.manu__left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    text-decoration: none;
+    color: #0056d2;
+    font-size: 1.6rem;
+}
+
+.menu__btn {
+    margin-left: 24px;
+    padding: 10px 18px;
+    background-color: #0056d2;
+    color: #fff;
+    border: none;
+    font-size: 1.4rem;
+    border-radius: 2px;
+    position: relative;
+}
+
+.menu__btn:hover {
+    cursor: pointer;
+    outline: 1px solid #000;
+}
+
+.menu__btn-icon {
+    padding-left: 3px;
+}
+
+.header__search {
+    margin-left: 24px;
+    width: 360px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    display: flex;
+}
+
+.header__search-input {
+    font-size: 1.4rem;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.header__search-item {
+    border: none;
+}
+
+.header__search-icon {
+    padding: 12px 14px;
+    border: none;
+    background-color: #0056d2;
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav__menu {
+    display: flex;
+    font-size: 1.4rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.nav__menu-item {
+    padding: 12px 18px;
+    color: #333;
+    text-decoration: none;
+}
+
+.nav__icon-bell {
+    font-size: 2.8rem;
+    padding: 12px 18px;
+    position: relative;
+}
+
+.nav__icon-bell::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 40px;
+    width: 1px;
+    background-color: rgb(196, 196, 196);
+    right: -14%;
+    top: 10%;
+}
+
+.nav__icon-user {
+    font-size: 3.6rem;
+    padding: 12px 18px;
+    color: #3bafda;
+    display: block;
+    margin-left: 18px;
+}
