@@ -62,9 +62,18 @@
         </div>
     
         <div id="slider">
-            <div class="text-slider">
+            <img id="img-change" onclick="changeImage()" src="./assets/img/chicago.jpg" alt="" class="slider-img">
+            <div id="text1" class="text-slider">
                 <h2 class="text-heading">Chicago</h2>
                 <p class="text-pragraph">Thank you, Chicago - A night we won't forget.</p>
+            </div>
+            <div id="text2" class="text-slider">
+                <h2 class="text-heading">Los Angeles</h2>
+                <p class="text-pragraph">We had the best time playing at Venice Beach!</p>
+            </div>
+            <div id="text3" class="text-slider">
+                <h2 class="text-heading">New York</h2>
+                <p class="text-pragraph">The atmosphere in New York is lorem ipsum.</p>
             </div>
         </div>
     
@@ -211,6 +220,31 @@
 
         </div>
     </div>
+    <script>
+        var index = 1;
+            function changeImage() {
+                var imgs = ["./assets/img/chicago.jpg", "./assets/img/la.jpg", "./assets/img/ny.jpg"];
+                document.getElementById('img-change').src = imgs[index];
+                index++;
+                if(index==3) {
+                    index = 0;
+                }
+                if (index == 0) {
+                    document.getElementById('text1').style.display = "none";
+                    document.getElementById('text2').style.display = "none";
+                    document.getElementById('text3').style.display = "block";
+                } else if (index == 1) {
+                    document.getElementById('text1').style.display = "block";
+                    document.getElementById('text2').style.display = "none";
+                    document.getElementById('text3').style.display = "none";
+                } else if (index == 2) {
+                    document.getElementById('text1').style.display = "none";
+                    document.getElementById('text2').style.display = "block";
+                    document.getElementById('text3').style.display = "none";
+                }
+            }
+            setInterval(changeImage, 3000);
+    </script>
     <script>
         var header = document.getElementById('header');
         var mobileMenu = document.getElementById('Mobile-menu');
